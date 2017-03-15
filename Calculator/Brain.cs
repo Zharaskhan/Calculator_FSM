@@ -52,7 +52,7 @@ namespace Calculator
                 case "X":
                     result *= double.Parse(bufferNumber);
                     break;
-                case "*/*":
+                case "÷":
                     //TODO check division by 0
                     result /= double.Parse(bufferNumber);
                     break;

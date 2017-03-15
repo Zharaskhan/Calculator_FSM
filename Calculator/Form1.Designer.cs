@@ -54,7 +54,7 @@
             this.operatorSqrt = new System.Windows.Forms.Button();
             this.operatorPercent = new System.Windows.Forms.Button();
             this.Display = new System.Windows.Forms.TextBox();
-            this.historyBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // operatorPlusMinus
@@ -63,7 +63,7 @@
             this.operatorPlusMinus.Name = "operatorPlusMinus";
             this.operatorPlusMinus.Size = new System.Drawing.Size(64, 64);
             this.operatorPlusMinus.TabIndex = 0;
-            this.operatorPlusMinus.Text = "-+";
+            this.operatorPlusMinus.Text = "±";
             this.operatorPlusMinus.UseVisualStyleBackColor = true;
             // 
             // digit0
@@ -222,7 +222,7 @@
             this.operatorDiv.Name = "operatorDiv";
             this.operatorDiv.Size = new System.Drawing.Size(64, 64);
             this.operatorDiv.TabIndex = 19;
-            this.operatorDiv.Text = "*/*";
+            this.operatorDiv.Text = "÷";
             this.operatorDiv.UseVisualStyleBackColor = true;
             this.operatorDiv.Click += new System.EventHandler(this.ASMD_Click);
             // 
@@ -285,7 +285,7 @@
             this.operatorSqrt.Name = "operatorSqrt";
             this.operatorSqrt.Size = new System.Drawing.Size(64, 64);
             this.operatorSqrt.TabIndex = 22;
-            this.operatorSqrt.Text = "SQRT";
+            this.operatorSqrt.Text = "√";
             this.operatorSqrt.UseVisualStyleBackColor = true;
             // 
             // operatorPercent
@@ -300,27 +300,28 @@
             // Display
             // 
             this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Display.Location = new System.Drawing.Point(27, 69);
+            this.Display.Location = new System.Drawing.Point(27, 55);
             this.Display.Name = "Display";
             this.Display.Size = new System.Drawing.Size(263, 44);
             this.Display.TabIndex = 25;
             this.Display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // historyBox
+            // label2
             // 
-            this.historyBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.historyBox.Location = new System.Drawing.Point(27, 28);
-            this.historyBox.Name = "historyBox";
-            this.historyBox.Size = new System.Drawing.Size(263, 44);
-            this.historyBox.TabIndex = 26;
-            this.historyBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 33);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "STANDARD";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 562);
-            this.Controls.Add(this.historyBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.operatorRev);
             this.Controls.Add(this.operatorSquare);
@@ -382,7 +383,7 @@
         private System.Windows.Forms.Button operatorSqrt;
         private System.Windows.Forms.Button operatorPercent;
         private System.Windows.Forms.TextBox Display;
-        private System.Windows.Forms.TextBox historyBox;
+        private System.Windows.Forms.Label label2;
     }
 }
 
