@@ -272,7 +272,7 @@
             this.operatorRev.TabIndex = 24;
             this.operatorRev.Text = "1/x";
             this.operatorRev.UseVisualStyleBackColor = true;
-
+            this.operatorRev.Click += new System.EventHandler(this.function_Click);
             // 
             // operatorSquare
             // 
@@ -282,7 +282,7 @@
             this.operatorSquare.TabIndex = 23;
             this.operatorSquare.Text = "x^2";
             this.operatorSquare.UseVisualStyleBackColor = true;
-
+            this.operatorSquare.Click += new System.EventHandler(this.function_Click);
             // 
             // operatorSqrt
             // 
@@ -292,7 +292,7 @@
             this.operatorSqrt.TabIndex = 22;
             this.operatorSqrt.Text = "√";
             this.operatorSqrt.UseVisualStyleBackColor = true;
-
+            this.operatorSqrt.Click += new System.EventHandler(this.function_Click);
             // 
             // operatorPercent
             // 
@@ -302,7 +302,7 @@
             this.operatorPercent.TabIndex = 21;
             this.operatorPercent.Text = "%";
             this.operatorPercent.UseVisualStyleBackColor = true;
-
+            this.operatorPercent.Click += new System.EventHandler(this.function_Click);
             // 
             // Display
             // 
@@ -327,6 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(315, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Display);

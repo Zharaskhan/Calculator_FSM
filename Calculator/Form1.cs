@@ -61,6 +61,10 @@ namespace Calculator
         private void function_Click(object sender, EventArgs e)
         {
 
+            Button curButton = sender as Button;
+            brain.FunctionClicked(curButton.Text);
         }
+
+
     }
 }

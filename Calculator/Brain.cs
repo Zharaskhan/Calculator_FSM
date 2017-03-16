@@ -318,6 +318,83 @@ namespace Calculator
             }
 
         }
+        public void FunctionClicked(string val)
+        {
+
+            switch (state)
+            {
+                case State.ZeroState:
+                    if (val == "1/x")
+                    {
+                        state = State.ErrorState;
+
+                        TextDisplay.Text = "DIVISION BY 0";
+                    }
+                    break;
+                case State.ComputeState:
+                    
+                case State.AccumulatorDecimalState:
+                //break;
+                case State.AccumulatorState:
+                    if (state == State.ComputeState)
+                    {
+                        bufferNumber = result.ToString("F6");
+                        pendingOp = "_";
+                      //  MessageBox.Show(bufferNumber + " " + result);
+                    }
+                    double cur_num = double.Parse(bufferNumber);
+                    if (val == "x^2")
+                    {
+                        state = State.ComputeState;
+                        bufferNumber = (cur_num * cur_num).ToString("F6");
+
+                    } else if (val == "√")
+                    {
+                        if (cur_num < 0.0)
+                        {
+                            state = State.ErrorState;
+
+                            TextDisplay.Text = "Invalid input";
+                            return;
+                        } else
+                        {
+                            state = State.ComputeState;
+                            bufferNumber = (Math.Sqrt(cur_num)).ToString("F6");
+                        }
+
+                    } else if (val == "1/x")
+                    {
+                        if (cur_num == 0.0)
+                        {
+                            state = State.ErrorState;
+
+                            TextDisplay.Text = "Division by Zero";
+                            return;
+                        }
+                        else
+                        {
+                            state = State.ComputeState;
+                            bufferNumber = (1.0 / cur_num).ToString("F6");
+                        }
+                    } else if (val == "%")
+                    {
+                        state = State.ComputeState;
+                        bufferNumber = (result / 100.0 * cur_num).ToString("F6");
+                    }
+
+
+                    //if (pendingOp == "_") MessageBox.Show("Soryan");
+                    Update();
+                    break;
+               
+                case State.ErrorState:
+                   
+
+                    break;
+
+            }
+
+        }
 
     }
 }
