@@ -53,7 +53,16 @@ namespace Calculator
                     result *= double.Parse(bufferNumber);
                     break;
                 case "÷":
-                    //TODO check division by 0
+                    //division by 0
+                    if (double.Parse(bufferNumber) == 0.0)
+                    {
+                        state = State.ErrorState;
+
+                        TextDisplay.Text = "DIVISION BY 0";
+                        return;
+                    }
+
+
                     result /= double.Parse(bufferNumber);
                     break;
                 case "_":
@@ -71,27 +80,41 @@ namespace Calculator
 
         public void EraserClicked(string text)
         {
-            throw new NotImplementedException();
+
             switch (state)
             {
                 case State.ZeroState:
                     break;
                 case State.AccumulatorDecimalState:
-                //break;
-                case State.AccumulatorState:
-                //break;
-                case State.ComputeState:
-
-                    if (val == "C")
+                    if (bufferNumber.Last() == '.')
                     {
-                        result = 0;
-                        pendingOp = "_";
+                        state = State.AccumulatorState;
+                    }
+                    
+                    bufferNumber = bufferNumber.Remove(bufferNumber.Length - 1);
+
+                    TextDisplay.Text = bufferNumber;
+                    break;
+                case State.AccumulatorState:
+
+                    if (bufferNumber.Length == 1)
+                    {
+                        state = State.ZeroState;
+                        bufferNumber = "0";
+                    } else
+                    {
+
+                            bufferNumber = bufferNumber.Remove(bufferNumber.Length - 1);
+                    }
+                    if (bufferNumber.Length == 1 && (bufferNumber[0] == '0' || bufferNumber[0] == '-'))
+                    {
+                        bufferNumber = "0";
+                        state = State.ZeroState;
                     }
 
-
-                    state = State.ZeroState;
-                    bufferNumber = "0";
-                    TextDisplay.Text = "0";
+                    TextDisplay.Text = bufferNumber;
+                    break;
+                case State.ComputeState:
                     break;
                 case State.ErrorState:
                     break;
@@ -191,13 +214,14 @@ namespace Calculator
             switch (state)
             {
                 case State.ZeroState:
-                    state = State.ComputeState;
-                   // bufferNumber = "0";
+                   // state = State.ComputeState;
+                    
+                    // bufferNumber = "0";
 
                     //TextDisplay.Text = "0";
-                    break;
+ 
                 case State.AccumulatorDecimalState:
-                //break;
+                   
                 case State.AccumulatorState:
                     state = State.ComputeState;
 
@@ -282,6 +306,13 @@ namespace Calculator
                     TextDisplay.Text = "0";
                     break;
                 case State.ErrorState:
+                    if (val == "C") {
+                        state = State.ZeroState;
+                        bufferNumber = "0";
+                        TextDisplay.Text = "0";
+                        result = 0;
+                        pendingOp = "_";
+                    }
                     break;
 
             }

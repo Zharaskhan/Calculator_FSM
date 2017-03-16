@@ -57,5 +57,10 @@ namespace Calculator
             Button curButton = sender as Button;
             brain.EraserClicked(curButton.Text);
         }
+
+        private void function_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

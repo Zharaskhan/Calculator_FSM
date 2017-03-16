@@ -272,6 +272,7 @@
             this.operatorRev.TabIndex = 24;
             this.operatorRev.Text = "1/x";
             this.operatorRev.UseVisualStyleBackColor = true;
+
             // 
             // operatorSquare
             // 
@@ -281,6 +282,7 @@
             this.operatorSquare.TabIndex = 23;
             this.operatorSquare.Text = "x^2";
             this.operatorSquare.UseVisualStyleBackColor = true;
+
             // 
             // operatorSqrt
             // 
@@ -290,6 +292,7 @@
             this.operatorSqrt.TabIndex = 22;
             this.operatorSqrt.Text = "√";
             this.operatorSqrt.UseVisualStyleBackColor = true;
+
             // 
             // operatorPercent
             // 
@@ -299,6 +302,7 @@
             this.operatorPercent.TabIndex = 21;
             this.operatorPercent.Text = "%";
             this.operatorPercent.UseVisualStyleBackColor = true;
+
             // 
             // Display
             // 
