@@ -16,8 +16,8 @@ namespace Calculator
         enum State
         {
             ZeroState,
-            AccumulateDigitsState,
-            AccumulateDigitsWithDecimalState,
+            AccumulatorState,
+            AccumulatorDecimalState,
             ComputeState,
             ErrorState
         }
@@ -69,7 +69,38 @@ namespace Calculator
             bufferNumber = "0";
         }
 
-       
+        public void EraserClicked(string text)
+        {
+            throw new NotImplementedException();
+            switch (state)
+            {
+                case State.ZeroState:
+                    break;
+                case State.AccumulatorDecimalState:
+                //break;
+                case State.AccumulatorState:
+                //break;
+                case State.ComputeState:
+
+                    if (val == "C")
+                    {
+                        result = 0;
+                        pendingOp = "_";
+                    }
+
+
+                    state = State.ZeroState;
+                    bufferNumber = "0";
+                    TextDisplay.Text = "0";
+                    break;
+                case State.ErrorState:
+                    break;
+
+            }
+
+        }
+
+
 
 
         /*
@@ -78,9 +109,9 @@ namespace Calculator
                     {
                         case State.ZeroState:
                             break;
-                        case State.AccumulateDigitsState:
+                        case State.AccumulatorState:
                             break;
-                        case State.AccumulateDigitsWithDecimalState:
+                        case State.AccumulatorDecimalState:
                             break;
                         case State.ComputeState:
                             break;
@@ -101,9 +132,9 @@ namespace Calculator
 
                     TextDisplay.Text = "0" + val;
                     break;
-                case State.AccumulateDigitsWithDecimalState:
+                case State.AccumulatorDecimalState:
                     //break;
-                case State.AccumulateDigitsState:
+                case State.AccumulatorState:
                     state = State.ComputeState;
                     if (pendingOpStatus == true)
                     {
@@ -133,20 +164,20 @@ namespace Calculator
             switch (state)
             {
                 case State.ZeroState:
-                    state = State.AccumulateDigitsWithDecimalState;
+                    state = State.AccumulatorDecimalState;
                     bufferNumber = "0.";
                     TextDisplay.Text = "0.";
                     break;
-                case State.AccumulateDigitsWithDecimalState:
+                case State.AccumulatorDecimalState:
                     break;
-                case State.AccumulateDigitsState:
-                    state = State.AccumulateDigitsWithDecimalState;
+                case State.AccumulatorState:
+                    state = State.AccumulatorDecimalState;
                     bufferNumber += ".";
 
                     TextDisplay.Text += ".";
                     break;
                 case State.ComputeState:
-                    state = State.AccumulateDigitsWithDecimalState;
+                    state = State.AccumulatorDecimalState;
                     bufferNumber = "0.";
                     TextDisplay.Text = "0.";
                     break;
@@ -165,9 +196,9 @@ namespace Calculator
 
                     //TextDisplay.Text = "0";
                     break;
-                case State.AccumulateDigitsWithDecimalState:
+                case State.AccumulatorDecimalState:
                 //break;
-                case State.AccumulateDigitsState:
+                case State.AccumulatorState:
                     state = State.ComputeState;
 
 
@@ -194,20 +225,22 @@ namespace Calculator
                 case State.ZeroState:
                     if (digit != "0")
                     {
-                        state = State.AccumulateDigitsState;
+                        state = State.AccumulatorState;
                         bufferNumber = digit;
                         TextDisplay.Text = digit;
                     }
                     break;
-                case State.AccumulateDigitsWithDecimalState:
+                case State.AccumulatorDecimalState:
                     bufferNumber += digit;
+                    
                     TextDisplay.Text += digit;
                     break;
-                case State.AccumulateDigitsState:
+                case State.AccumulatorState:
                     bufferNumber += digit;
                     TextDisplay.Text += digit;
                     break;
                 case State.ComputeState:
+                    TextDisplay.Text = "";
                     bufferNumber = digit;
                     if (digit == "0")
                     {
@@ -215,7 +248,7 @@ namespace Calculator
                     } else
                     {
 
-                        state = State.AccumulateDigitsState;
+                        state = State.AccumulatorState;
                     }
 
                     TextDisplay.Text += digit;
@@ -225,5 +258,35 @@ namespace Calculator
             }
 
         }
+        public void CleanerClicked(string val)
+        {
+
+            switch (state)
+            {
+                case State.ZeroState:
+                    break;
+                case State.AccumulatorDecimalState:
+                    //break;
+                case State.AccumulatorState: 
+                    //break;
+                case State.ComputeState:
+
+                    if (val == "C") {
+                        result = 0;
+                        pendingOp = "_";
+                    }
+
+
+                    state = State.ZeroState;
+                    bufferNumber = "0";
+                    TextDisplay.Text = "0";
+                    break;
+                case State.ErrorState:
+                    break;
+
+            }
+
+        }
+
     }
 }

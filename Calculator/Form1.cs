@@ -44,5 +44,18 @@ namespace Calculator
             Button curButton = sender as Button;
             brain.SeparatorClicked(curButton.Text);
         }
+
+        private void operatorClear_Click(object sender, EventArgs e)
+        {
+            Button curButton = sender as Button;
+            brain.CleanerClicked(curButton.Text);
+        }
+
+        private void operatorErase_Click(object sender, EventArgs e)
+        {
+
+            Button curButton = sender as Button;
+            brain.EraserClicked(curButton.Text);
+        }
     }
 }

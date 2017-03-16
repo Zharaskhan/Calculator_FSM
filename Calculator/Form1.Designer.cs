@@ -234,6 +234,7 @@
             this.operatorErase.TabIndex = 18;
             this.operatorErase.Text = "<=";
             this.operatorErase.UseVisualStyleBackColor = true;
+            this.operatorErase.Click += new System.EventHandler(this.operatorErase_Click);
             // 
             // operatorC
             // 
@@ -243,6 +244,7 @@
             this.operatorC.TabIndex = 17;
             this.operatorC.Text = "C";
             this.operatorC.UseVisualStyleBackColor = true;
+            this.operatorC.Click += new System.EventHandler(this.operatorClear_Click);
             // 
             // operatorCE
             // 
@@ -252,6 +254,7 @@
             this.operatorCE.TabIndex = 16;
             this.operatorCE.Text = "CE";
             this.operatorCE.UseVisualStyleBackColor = true;
+            this.operatorCE.Click += new System.EventHandler(this.operatorClear_Click);
             // 
             // label1
             // 
