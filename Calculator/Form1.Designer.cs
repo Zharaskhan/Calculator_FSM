@@ -55,12 +55,17 @@
             this.operatorPercent = new System.Windows.Forms.Button();
             this.Display = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.MemoryClear = new System.Windows.Forms.Button();
+            this.MemoryRecall = new System.Windows.Forms.Button();
+            this.MemoryPlus = new System.Windows.Forms.Button();
+            this.MemoryMinus = new System.Windows.Forms.Button();
+            this.MemorySave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // operatorPlusMinus
             // 
             this.operatorPlusMinus.BackColor = System.Drawing.SystemColors.Menu;
-            this.operatorPlusMinus.Location = new System.Drawing.Point(16, 486);
+            this.operatorPlusMinus.Location = new System.Drawing.Point(13, 518);
             this.operatorPlusMinus.Name = "operatorPlusMinus";
             this.operatorPlusMinus.Size = new System.Drawing.Size(64, 64);
             this.operatorPlusMinus.TabIndex = 0;
@@ -70,7 +75,7 @@
             // 
             // digit0
             // 
-            this.digit0.Location = new System.Drawing.Point(86, 486);
+            this.digit0.Location = new System.Drawing.Point(83, 518);
             this.digit0.Name = "digit0";
             this.digit0.Size = new System.Drawing.Size(64, 64);
             this.digit0.TabIndex = 1;
@@ -80,7 +85,7 @@
             // 
             // separator
             // 
-            this.separator.Location = new System.Drawing.Point(156, 486);
+            this.separator.Location = new System.Drawing.Point(153, 518);
             this.separator.Name = "separator";
             this.separator.Size = new System.Drawing.Size(64, 64);
             this.separator.TabIndex = 2;
@@ -90,7 +95,7 @@
             // 
             // operatorEquals
             // 
-            this.operatorEquals.Location = new System.Drawing.Point(226, 486);
+            this.operatorEquals.Location = new System.Drawing.Point(223, 518);
             this.operatorEquals.Name = "operatorEquals";
             this.operatorEquals.Size = new System.Drawing.Size(64, 64);
             this.operatorEquals.TabIndex = 3;
@@ -100,7 +105,7 @@
             // 
             // operatorPlus
             // 
-            this.operatorPlus.Location = new System.Drawing.Point(226, 416);
+            this.operatorPlus.Location = new System.Drawing.Point(223, 448);
             this.operatorPlus.Name = "operatorPlus";
             this.operatorPlus.Size = new System.Drawing.Size(64, 64);
             this.operatorPlus.TabIndex = 7;
@@ -110,7 +115,7 @@
             // 
             // digit3
             // 
-            this.digit3.Location = new System.Drawing.Point(156, 416);
+            this.digit3.Location = new System.Drawing.Point(153, 448);
             this.digit3.Name = "digit3";
             this.digit3.Size = new System.Drawing.Size(64, 64);
             this.digit3.TabIndex = 6;
@@ -120,7 +125,7 @@
             // 
             // digit2
             // 
-            this.digit2.Location = new System.Drawing.Point(86, 416);
+            this.digit2.Location = new System.Drawing.Point(83, 448);
             this.digit2.Name = "digit2";
             this.digit2.Size = new System.Drawing.Size(64, 64);
             this.digit2.TabIndex = 5;
@@ -130,7 +135,7 @@
             // 
             // digit1
             // 
-            this.digit1.Location = new System.Drawing.Point(16, 416);
+            this.digit1.Location = new System.Drawing.Point(13, 448);
             this.digit1.Name = "digit1";
             this.digit1.Size = new System.Drawing.Size(64, 64);
             this.digit1.TabIndex = 4;
@@ -140,7 +145,7 @@
             // 
             // operatorMinus
             // 
-            this.operatorMinus.Location = new System.Drawing.Point(226, 346);
+            this.operatorMinus.Location = new System.Drawing.Point(223, 378);
             this.operatorMinus.Name = "operatorMinus";
             this.operatorMinus.Size = new System.Drawing.Size(64, 64);
             this.operatorMinus.TabIndex = 11;
@@ -150,7 +155,7 @@
             // 
             // digit6
             // 
-            this.digit6.Location = new System.Drawing.Point(156, 346);
+            this.digit6.Location = new System.Drawing.Point(153, 378);
             this.digit6.Name = "digit6";
             this.digit6.Size = new System.Drawing.Size(64, 64);
             this.digit6.TabIndex = 10;
@@ -160,7 +165,7 @@
             // 
             // digit5
             // 
-            this.digit5.Location = new System.Drawing.Point(86, 346);
+            this.digit5.Location = new System.Drawing.Point(83, 378);
             this.digit5.Name = "digit5";
             this.digit5.Size = new System.Drawing.Size(64, 64);
             this.digit5.TabIndex = 9;
@@ -170,7 +175,7 @@
             // 
             // digit4
             // 
-            this.digit4.Location = new System.Drawing.Point(16, 346);
+            this.digit4.Location = new System.Drawing.Point(13, 378);
             this.digit4.Name = "digit4";
             this.digit4.Size = new System.Drawing.Size(64, 64);
             this.digit4.TabIndex = 8;
@@ -180,7 +185,7 @@
             // 
             // operatorMult
             // 
-            this.operatorMult.Location = new System.Drawing.Point(226, 276);
+            this.operatorMult.Location = new System.Drawing.Point(223, 308);
             this.operatorMult.Name = "operatorMult";
             this.operatorMult.Size = new System.Drawing.Size(64, 64);
             this.operatorMult.TabIndex = 15;
@@ -190,7 +195,7 @@
             // 
             // digit9
             // 
-            this.digit9.Location = new System.Drawing.Point(156, 276);
+            this.digit9.Location = new System.Drawing.Point(153, 308);
             this.digit9.Name = "digit9";
             this.digit9.Size = new System.Drawing.Size(64, 64);
             this.digit9.TabIndex = 14;
@@ -200,7 +205,7 @@
             // 
             // digit8
             // 
-            this.digit8.Location = new System.Drawing.Point(86, 276);
+            this.digit8.Location = new System.Drawing.Point(83, 308);
             this.digit8.Name = "digit8";
             this.digit8.Size = new System.Drawing.Size(64, 64);
             this.digit8.TabIndex = 13;
@@ -210,7 +215,7 @@
             // 
             // digit7
             // 
-            this.digit7.Location = new System.Drawing.Point(16, 276);
+            this.digit7.Location = new System.Drawing.Point(13, 308);
             this.digit7.Name = "digit7";
             this.digit7.Size = new System.Drawing.Size(64, 64);
             this.digit7.TabIndex = 12;
@@ -220,7 +225,7 @@
             // 
             // operatorDiv
             // 
-            this.operatorDiv.Location = new System.Drawing.Point(226, 206);
+            this.operatorDiv.Location = new System.Drawing.Point(223, 238);
             this.operatorDiv.Name = "operatorDiv";
             this.operatorDiv.Size = new System.Drawing.Size(64, 64);
             this.operatorDiv.TabIndex = 19;
@@ -230,7 +235,7 @@
             // 
             // operatorErase
             // 
-            this.operatorErase.Location = new System.Drawing.Point(156, 206);
+            this.operatorErase.Location = new System.Drawing.Point(153, 238);
             this.operatorErase.Name = "operatorErase";
             this.operatorErase.Size = new System.Drawing.Size(64, 64);
             this.operatorErase.TabIndex = 18;
@@ -240,7 +245,7 @@
             // 
             // operatorC
             // 
-            this.operatorC.Location = new System.Drawing.Point(86, 206);
+            this.operatorC.Location = new System.Drawing.Point(83, 238);
             this.operatorC.Name = "operatorC";
             this.operatorC.Size = new System.Drawing.Size(64, 64);
             this.operatorC.TabIndex = 17;
@@ -250,7 +255,7 @@
             // 
             // operatorCE
             // 
-            this.operatorCE.Location = new System.Drawing.Point(16, 206);
+            this.operatorCE.Location = new System.Drawing.Point(13, 238);
             this.operatorCE.Name = "operatorCE";
             this.operatorCE.Size = new System.Drawing.Size(64, 64);
             this.operatorCE.TabIndex = 16;
@@ -268,7 +273,7 @@
             // 
             // operatorRev
             // 
-            this.operatorRev.Location = new System.Drawing.Point(226, 136);
+            this.operatorRev.Location = new System.Drawing.Point(223, 168);
             this.operatorRev.Name = "operatorRev";
             this.operatorRev.Size = new System.Drawing.Size(64, 64);
             this.operatorRev.TabIndex = 24;
@@ -278,7 +283,7 @@
             // 
             // operatorSquare
             // 
-            this.operatorSquare.Location = new System.Drawing.Point(156, 136);
+            this.operatorSquare.Location = new System.Drawing.Point(153, 168);
             this.operatorSquare.Name = "operatorSquare";
             this.operatorSquare.Size = new System.Drawing.Size(64, 64);
             this.operatorSquare.TabIndex = 23;
@@ -288,7 +293,7 @@
             // 
             // operatorSqrt
             // 
-            this.operatorSqrt.Location = new System.Drawing.Point(86, 136);
+            this.operatorSqrt.Location = new System.Drawing.Point(83, 168);
             this.operatorSqrt.Name = "operatorSqrt";
             this.operatorSqrt.Size = new System.Drawing.Size(64, 64);
             this.operatorSqrt.TabIndex = 22;
@@ -298,7 +303,7 @@
             // 
             // operatorPercent
             // 
-            this.operatorPercent.Location = new System.Drawing.Point(16, 136);
+            this.operatorPercent.Location = new System.Drawing.Point(13, 168);
             this.operatorPercent.Name = "operatorPercent";
             this.operatorPercent.Size = new System.Drawing.Size(64, 64);
             this.operatorPercent.TabIndex = 21;
@@ -325,12 +330,67 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "STANDARD";
             // 
+            // MemoryClear
+            // 
+            this.MemoryClear.Location = new System.Drawing.Point(12, 135);
+            this.MemoryClear.Name = "MemoryClear";
+            this.MemoryClear.Size = new System.Drawing.Size(50, 27);
+            this.MemoryClear.TabIndex = 27;
+            this.MemoryClear.Text = "MC";
+            this.MemoryClear.UseVisualStyleBackColor = true;
+            this.MemoryClear.Click += new System.EventHandler(this.MemorySave_Click);
+            // 
+            // MemoryRecall
+            // 
+            this.MemoryRecall.Location = new System.Drawing.Point(68, 135);
+            this.MemoryRecall.Name = "MemoryRecall";
+            this.MemoryRecall.Size = new System.Drawing.Size(50, 27);
+            this.MemoryRecall.TabIndex = 28;
+            this.MemoryRecall.Text = "MR";
+            this.MemoryRecall.UseVisualStyleBackColor = true;
+            this.MemoryRecall.Click += new System.EventHandler(this.MemorySave_Click);
+            // 
+            // MemoryPlus
+            // 
+            this.MemoryPlus.Location = new System.Drawing.Point(124, 135);
+            this.MemoryPlus.Name = "MemoryPlus";
+            this.MemoryPlus.Size = new System.Drawing.Size(50, 27);
+            this.MemoryPlus.TabIndex = 29;
+            this.MemoryPlus.Text = "M+";
+            this.MemoryPlus.UseVisualStyleBackColor = true;
+            this.MemoryPlus.Click += new System.EventHandler(this.MemorySave_Click);
+            // 
+            // MemoryMinus
+            // 
+            this.MemoryMinus.Location = new System.Drawing.Point(180, 135);
+            this.MemoryMinus.Name = "MemoryMinus";
+            this.MemoryMinus.Size = new System.Drawing.Size(50, 27);
+            this.MemoryMinus.TabIndex = 30;
+            this.MemoryMinus.Text = "M-";
+            this.MemoryMinus.UseVisualStyleBackColor = true;
+            this.MemoryMinus.Click += new System.EventHandler(this.MemorySave_Click);
+            // 
+            // MemorySave
+            // 
+            this.MemorySave.Location = new System.Drawing.Point(236, 135);
+            this.MemorySave.Name = "MemorySave";
+            this.MemorySave.Size = new System.Drawing.Size(50, 27);
+            this.MemorySave.TabIndex = 31;
+            this.MemorySave.Text = "MS";
+            this.MemorySave.UseVisualStyleBackColor = true;
+            this.MemorySave.Click += new System.EventHandler(this.MemorySave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(315, 562);
+            this.ClientSize = new System.Drawing.Size(315, 589);
+            this.Controls.Add(this.MemorySave);
+            this.Controls.Add(this.MemoryMinus);
+            this.Controls.Add(this.MemoryPlus);
+            this.Controls.Add(this.MemoryRecall);
+            this.Controls.Add(this.MemoryClear);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.operatorRev);
@@ -397,6 +457,11 @@
         private System.Windows.Forms.Button operatorPercent;
         private System.Windows.Forms.TextBox Display;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button MemoryClear;
+        private System.Windows.Forms.Button MemoryRecall;
+        private System.Windows.Forms.Button MemoryPlus;
+        private System.Windows.Forms.Button MemoryMinus;
+        private System.Windows.Forms.Button MemorySave;
     }
 }
 

@@ -27,6 +27,7 @@ namespace Calculator
         bool pendingOpStatus;
         string pendingOp;
         double result;
+        double memory;
 
         string bufferNumber;
 
@@ -38,6 +39,7 @@ namespace Calculator
             result = 0;
             bufferNumber = "0";
             TextDisplay.Text = "0";
+            memory = 0;
         }
 
         void Update()
@@ -350,6 +352,30 @@ namespace Calculator
             }
 
         }
+        public void MemoryClicked(string val)
+        {
+            if (val == "MC") {
+                memory = 0;
+            } else if (val == "MS")
+            {
+                memory = double.Parse(bufferNumber);
+            } else if (val == "M-")
+            {
+
+                memory -= double.Parse(bufferNumber);
+            } else if (val == "M+")
+            {
+
+                memory += double.Parse(bufferNumber);
+            } else if (val == "MR")
+            {
+                bufferNumber = memory.ToString("F6");
+                TextDisplay.Text = bufferNumber;
+            }
+
+
+        }
+
         public void FunctionClicked(string val)
         {
 

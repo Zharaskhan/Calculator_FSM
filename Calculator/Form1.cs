@@ -70,5 +70,11 @@ namespace Calculator
             Button curButton = sender as Button;
             brain.PlusMinusClicked(curButton.Text);
         }
+
+        private void MemorySave_Click(object sender, EventArgs e)
+        {
+            Button curButton = sender as Button;
+            brain.MemoryClicked(curButton.Text);
+        }
     }
 }
