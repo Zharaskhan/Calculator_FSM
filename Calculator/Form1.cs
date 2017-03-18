@@ -65,6 +65,10 @@ namespace Calculator
             brain.FunctionClicked(curButton.Text);
         }
 
-
+        private void operatorPlusMinus_Click(object sender, EventArgs e)
+        {
+            Button curButton = sender as Button;
+            brain.PlusMinusClicked(curButton.Text);
+        }
     }
 }

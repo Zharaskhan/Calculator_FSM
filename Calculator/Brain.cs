@@ -37,6 +37,7 @@ namespace Calculator
             pendingOp = "_";
             result = 0;
             bufferNumber = "0";
+            TextDisplay.Text = "0";
         }
 
         void Update()
@@ -76,6 +77,37 @@ namespace Calculator
             }
             TextDisplay.Text = result.ToString();
             bufferNumber = "0";
+        }
+
+        internal void PlusMinusClicked(string text)
+        {
+            switch (state)
+            {
+                case State.ZeroState:
+                    break;
+                case State.AccumulatorDecimalState:
+                    bufferNumber = (double.Parse(bufferNumber) * -1.0).ToString("F6");
+
+                    TextDisplay.Text = bufferNumber;
+                    break;
+                case State.AccumulatorState:
+
+                    bufferNumber = (double.Parse(bufferNumber) * -1.0).ToString("F6");
+
+
+
+                    TextDisplay.Text = bufferNumber;
+                    break;
+                case State.ComputeState:
+
+                    result = -result;
+
+                    TextDisplay.Text = result.ToString("F6");
+                    break;
+                case State.ErrorState:
+                    break;
+
+            }
         }
 
         public void EraserClicked(string text)
@@ -383,7 +415,7 @@ namespace Calculator
                     }
 
 
-                    //if (pendingOp == "_") MessageBox.Show("Soryan");
+
                     Update();
                     break;
                

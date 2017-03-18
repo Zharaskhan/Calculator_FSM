@@ -59,12 +59,14 @@
             // 
             // operatorPlusMinus
             // 
+            this.operatorPlusMinus.BackColor = System.Drawing.SystemColors.Menu;
             this.operatorPlusMinus.Location = new System.Drawing.Point(16, 486);
             this.operatorPlusMinus.Name = "operatorPlusMinus";
             this.operatorPlusMinus.Size = new System.Drawing.Size(64, 64);
             this.operatorPlusMinus.TabIndex = 0;
             this.operatorPlusMinus.Text = "±";
-            this.operatorPlusMinus.UseVisualStyleBackColor = true;
+            this.operatorPlusMinus.UseVisualStyleBackColor = false;
+            this.operatorPlusMinus.Click += new System.EventHandler(this.operatorPlusMinus_Click);
             // 
             // digit0
             // 
@@ -307,9 +309,9 @@
             // Display
             // 
             this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Display.Location = new System.Drawing.Point(27, 55);
+            this.Display.Location = new System.Drawing.Point(12, 55);
             this.Display.Name = "Display";
-            this.Display.Size = new System.Drawing.Size(263, 44);
+            this.Display.Size = new System.Drawing.Size(291, 44);
             this.Display.TabIndex = 25;
             this.Display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -327,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(315, 562);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Display);
@@ -356,8 +358,11 @@
             this.Controls.Add(this.separator);
             this.Controls.Add(this.digit0);
             this.Controls.Add(this.operatorPlusMinus);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
